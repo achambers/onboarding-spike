@@ -1,0 +1,25 @@
+<form {{action (perform _loginTask) on="submit"}}>
+  <div>
+    <label for="login-username">Username:</label>
+    <input
+      id="login-username"
+      type="text"
+      value={{_username}}
+      oninput={{action (mut _username) value="target.value"}}
+    >
+  </div>
+
+  <div>
+    <label for="login-password">Password:</label>
+    <input
+      id="login-password"
+      type="password"
+      value={{_password}}
+      oninput={{action (mut _password) value="target.value"}}
+    >
+  </div>
+
+  <div>
+    <button type="submit">Login</button>
+  </div>
+</form>
